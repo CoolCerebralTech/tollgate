@@ -1,0 +1,26 @@
+{
+  "name": "@tollgate/agent-sdk",
+  "version": "0.1.0",
+  "description": "The financial trust layer for AI agents on Base",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types":   "./dist/index.d.ts",
+      "import":  "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build":      "tsup src/index.ts --format esm,cjs --dts",
+    "dev":        "tsx src/index.ts",
+    "test":       "vitest run",
+    "test:watch": "vitest",
+    "test:e2e":   "vitest run test/e2e.test.ts",
+    "typecheck":  "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "viem": ">=2.0.0"
+  }
+}

@@ -1,0 +1,25 @@
+cat > .gitignore << 'EOF'
+# Go
+core/data/
+core/*.db
+core/*.db-wal
+core/*.db-shm
+
+# Solidity
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+
+# TypeScript
+sdk/node_modules/
+sdk/dist/
+
+# Secrets — never commit these
+**/.env
+*.pem
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
+EOF

@@ -1,0 +1,31 @@
+version: "1.0.0"
+updated_at: "2026-05-18T00:00:00Z"
+updated_by: "founder@tollgate.dev"
+
+agents:
+  - id: "trading-bot-01"
+    name: "DeFi Trading Agent"
+    enabled: true
+    purpose: "defi_yield_optimization"
+    clearance_level: 2
+    spend_limits:
+      max_per_transaction_usd: 500
+      max_per_hour_usd: 2000
+      max_per_day_usd: 5000
+      auto_approve_below_usd: 50
+      require_human_above_usd: 100
+    allowed_destinations:
+      - "0xDEF4560000000000000000000000000000000000"
+    blocked_destinations:
+      - "0x0000000000000000000000000000000000000000"
+    allowed_purposes:
+      - "defi_yield_optimization"
+    reject_unsolicited_permissions: true
+    behavioral_risk_threshold: 0.7
+    behavioral_review_threshold: 0.4
+
+global_rules:
+  default_action: "deny"
+  max_request_age_seconds: 30
+  require_nonce: true
+  nonce_window_seconds: 120

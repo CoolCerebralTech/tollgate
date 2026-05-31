@@ -1,0 +1,15 @@
+.env
+data/
+*.pem
+*.db
+*.db-wal
+*.db-shm
+
+*.pem
+data/*.db
+
+.DS_Store
+Thumbs.db
+
+/tollgate
+/tollgate.exe

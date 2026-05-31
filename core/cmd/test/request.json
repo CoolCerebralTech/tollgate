@@ -1,0 +1,11 @@
+{
+    "agent_id": "trading-bot-01",
+    "action": "transfer",
+    "destination": "0xdef4560000000000000000000000000000000000",
+    "amount_usd": 10.00,
+    "amount_raw": "10000000",
+    "purpose": "defi_yield_optimization",
+    "chain_id": 84532,
+    "nonce": "test-curl-3",
+    "timestamp": "2026-05-18T12:55:30Z"
+}
