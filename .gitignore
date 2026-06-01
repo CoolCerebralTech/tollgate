@@ -1,11 +1,16 @@
 cat > .gitignore << 'EOF'
+# Secrets — never commit these
+**/.env
+*.pem
+*.key
+
 # Go
 core/data/
 core/*.db
 core/*.db-wal
 core/*.db-shm
 
-# Solidity
+# Solidity build artifacts
 contracts/out/
 contracts/cache/
 contracts/broadcast/
@@ -14,12 +19,8 @@ contracts/broadcast/
 sdk/node_modules/
 sdk/dist/
 
-# Secrets — never commit these
-**/.env
-*.pem
-*.key
-
 # OS
 .DS_Store
 Thumbs.db
+Thumbs.db:encdata
 EOF
